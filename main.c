@@ -1,4 +1,4 @@
-#include "front.c"
+#include "CensoFront.c"
 
 int main()
 {
@@ -6,11 +6,11 @@ int main()
     int rta=leeInfo(censo);
 
     if (rta==ERROR_MEMORIA)
-        error(ERROR_MEMORIA);
+        error(ERROR_MEMORIA,censo);
     else
     {
         rta=creaArchivos(censo);
         if (rta!=BIEN)
-            error(ERROR_ARCHIVO);
+            error(ERROR_ARCHIVO,censo);
     }
 }
